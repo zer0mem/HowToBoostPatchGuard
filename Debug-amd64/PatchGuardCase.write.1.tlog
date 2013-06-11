@@ -1,0 +1,6 @@
+^src\amd64\_instrinsics.asm
+D:\blog\#GIT\HowToBoostPatchGuard\Debug-amd64\_instrinsics.obj
+^src\amd64\_patchguardboost.asm
+D:\blog\#GIT\HowToBoostPatchGuard\Debug-amd64\_patchguardboost.obj
+^src\amd64\_syscall.asm
+D:\blog\#GIT\HowToBoostPatchGuard\Debug-amd64\_syscall.obj

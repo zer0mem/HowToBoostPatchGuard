@@ -1,0 +1,219 @@
+﻿Build started 5/27/2013 3:39:48 PM.
+     1>Project "D:\PROJECTS\GIT\src\Research\BluePill\HowToBoostPageGuard\BlackBox.vcxproj" on node 2 (Build target(s)).
+     1>InitializeBuildStatus:
+         Touching "D:\PROJECTS\GIT\src\Research\BluePill\HowToBoostPageGuard\\Release-amd64\PatchGuardCase.unsuccessfulbuild".
+       _MASM:
+         Assembling src\amd64\_hv.asm...
+         cmd.exe /C "C:\Users\phlavaty\AppData\Local\Temp\tmpfd32a860579249bcb27e07af9b919603.cmd"
+         ml64.exe /c /nologo /Zi /Fo"D:\PROJECTS\GIT\src\Research\BluePill\HowToBoostPageGuard\\Release-amd64\_hv.obj" /W3 /errorReport:prompt  /Tasrc\amd64\_hv.asm
+       _MASM:
+         Assembling src\amd64\_instrinsics.asm...
+         cmd.exe /C "C:\Users\phlavaty\AppData\Local\Temp\tmp38cc1d44d914406ea0cab33a8480211c.cmd"
+         ml64.exe /c /nologo /Zi /Fo"D:\PROJECTS\GIT\src\Research\BluePill\HowToBoostPageGuard\\Release-amd64\_instrinsics.obj" /W3 /errorReport:prompt  /Tasrc\amd64\_instrinsics.asm
+       _MASM:
+         Assembling src\amd64\_sysenter.asm...
+         cmd.exe /C "C:\Users\phlavaty\AppData\Local\Temp\tmp9851f59fe7884b938c287edfa30db164.cmd"
+         ml64.exe /c /nologo /Zi /Fo"D:\PROJECTS\GIT\src\Research\BluePill\HowToBoostPageGuard\\Release-amd64\_sysenter.obj" /W3 /errorReport:prompt  /Tasrc\amd64\_sysenter.asm
+       _MASM:
+         Assembling src\amd64\_vmx.asm...
+         cmd.exe /C "C:\Users\phlavaty\AppData\Local\Temp\tmpc8a0aca9a87a40e882b044a98fd647a3.cmd"
+         ml64.exe /c /nologo /Zi /Fo"D:\PROJECTS\GIT\src\Research\BluePill\HowToBoostPageGuard\\Release-amd64\_vmx.obj" /W3 /errorReport:prompt  /Tasrc\amd64\_vmx.asm
+       ClCompile:
+         D:\soft\installed\VC\bin\x86_amd64\CL.exe /c /I"C:\Program Files (x86)\Windows Kits\8.0\Include\shared" /I"C:\Program Files (x86)\Windows Kits\8.0\Include\km" /I"C:\Program Files (x86)\Windows Kits\8.0\Include\um" /I"C:\Program Files (x86)\Windows Kits\8.0\Include\km\crt" /ID:\PROJECTS\GIT\src\Research\BluePill\HowToBoostPageGuard\ /IC:\WinDDK\6001.18000\\inc\ddk\wnet /IC:\WinDDK\6001.18000\\inc\ifs\wnet /IC:\WinDDK\6001.18000\\inc\wnet /IC:\WinDDK\6001.18000\\inc\crt /Zi /nologo /W3 /WX- /O2 /D WIN64 /D _WIN64 /D _M_AMD64 /D _AMD_64_ /D _WINDLL /X /GF /Gm- /EHsc /MD /Zp8 /GS- /fp:precise /Zc:wchar_t /Zc:forScope- /GR- /Yc"stdafx.h" /Fp"D:\PROJECTS\GIT\src\Research\BluePill\HowToBoostPageGuard\\Release-amd64\PatchGuardCase.pch" /Fo"D:\PROJECTS\GIT\src\Research\BluePill\HowToBoostPageGuard\\Release-amd64\\" /Fd"D:\PROJECTS\GIT\src\Research\BluePill\HowToBoostPageGuard\\Release-amd64\vc110.pdb" /Gz /TP /Zl /errorReport:prompt PatchGuardCase.cpp src\Common\libc.cpp src\Cronos.cpp src\HyperV\HyperVisor.cpp src\HyperV\VirtualizedCpu.cpp src\HyperV\VMX.cpp src\PatchGuardBoost\PatchGuardBoost.cpp src\SYSENETER\Syseneter.cpp StdAfx.cpp
+         PatchGuardCase.cpp
+         libc.cpp
+     1>src\Common\libc.cpp(11): warning C4200: nonstandard extension used : zero-sized array in struct/union
+                 Cannot generate copy-ctor or copy-assignment operator when UDT contains a zero-sized array
+         Cronos.cpp
+         HyperVisor.cpp
+         VirtualizedCpu.cpp
+         VMX.cpp
+         PatchGuardBoost.cpp
+         Syseneter.cpp
+         StdAfx.cpp
+       ResourceCompile:
+         C:\Program Files (x86)\Windows Kits\8.0\bin\x86\rc.exe /l"0x0409" /nologo /fo"D:\PROJECTS\GIT\src\Research\BluePill\HowToBoostPageGuard\\Release-amd64\driver_template.res" driver_template.rc 
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V110\Microsoft.CppBuild.targets(1137,5): warning MSB8012: TargetPath(D:\PROJECTS\GIT\src\Research\BluePill\HowToBoostPageGuard\Release-amd64\PatchGuardCase.dll) does not match the Linker's OutputFile property value (D:\PROJECTS\GIT\src\Research\BluePill\HowToBoostPageGuard\Release-amd64\PatchGuardCase.sys). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Link.OutputFile).
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V110\Microsoft.CppBuild.targets(1138,5): warning MSB8012: TargetExt(.dll) does not match the Linker's OutputFile property value (.sys). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Link.OutputFile).
+       Link:
+         D:\soft\installed\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"D:\PROJECTS\GIT\src\Research\BluePill\HowToBoostPageGuard\Release-amd64\PatchGuardCase.sys" /INCREMENTAL:NO /NOLOGO /LIBPATH:C:\WinDDK\6001.18000\\lib\wnet\amd64 ntoskrnl.lib hal.lib libcmtd.lib "C:\Program Files (x86)\Windows Kits\8.0\Lib\win7\km\x64\procgrp.lib" /NODEFAULTLIB /MANIFEST:NO /DEBUG /PDB:"D:\PROJECTS\GIT\src\Research\BluePill\HowToBoostPageGuard\Release-amd64\PatchGuardCase.pdb" /SUBSYSTEM:NATIVE /Driver /OPT:REF /OPT:ICF /LTCG /TLBID:1 /ENTRY:"DriverEntry" /DYNAMICBASE /NXCOMPAT /MACHINE:X64 /safeseh:no /DLL "D:\PROJECTS\GIT\src\Research\BluePill\HowToBoostPageGuard\\Release-amd64\driver_template.res"
+         "D:\PROJECTS\GIT\src\Research\BluePill\HowToBoostPageGuard\\Release-amd64\PatchGuardCase.obj"
+         "D:\PROJECTS\GIT\src\Research\BluePill\HowToBoostPageGuard\\Release-amd64\libc.obj"
+         "D:\PROJECTS\GIT\src\Research\BluePill\HowToBoostPageGuard\\Release-amd64\Cronos.obj"
+         "D:\PROJECTS\GIT\src\Research\BluePill\HowToBoostPageGuard\\Release-amd64\HyperVisor.obj"
+         "D:\PROJECTS\GIT\src\Research\BluePill\HowToBoostPageGuard\\Release-amd64\VirtualizedCpu.obj"
+         "D:\PROJECTS\GIT\src\Research\BluePill\HowToBoostPageGuard\\Release-amd64\VMX.obj"
+         "D:\PROJECTS\GIT\src\Research\BluePill\HowToBoostPageGuard\\Release-amd64\PatchGuardBoost.obj"
+         "D:\PROJECTS\GIT\src\Research\BluePill\HowToBoostPageGuard\\Release-amd64\Syseneter.obj"
+         "D:\PROJECTS\GIT\src\Research\BluePill\HowToBoostPageGuard\\Release-amd64\StdAfx.obj"
+         "D:\PROJECTS\GIT\src\Research\BluePill\HowToBoostPageGuard\\Release-amd64\_hv.obj"
+         "D:\PROJECTS\GIT\src\Research\BluePill\HowToBoostPageGuard\\Release-amd64\_instrinsics.obj"
+         "D:\PROJECTS\GIT\src\Research\BluePill\HowToBoostPageGuard\\Release-amd64\_sysenter.obj"
+         "D:\PROJECTS\GIT\src\Research\BluePill\HowToBoostPageGuard\\Release-amd64\_vmx.obj"
+     1>libcmtd.lib(osfinfo.obj) : error LNK2001: unresolved external symbol __imp_GetLastError
+     1>libcmtd.lib(close.obj) : error LNK2001: unresolved external symbol __imp_GetLastError
+     1>libcmtd.lib(commit.obj) : error LNK2001: unresolved external symbol __imp_GetLastError
+     1>libcmtd.lib(write.obj) : error LNK2001: unresolved external symbol __imp_GetLastError
+     1>libcmtd.lib(lseeki64.obj) : error LNK2001: unresolved external symbol __imp_GetLastError
+     1>libcmtd.lib(wctomb.obj) : error LNK2001: unresolved external symbol __imp_GetLastError
+     1>libcmtd.lib(crtmboxw.obj) : error LNK2001: unresolved external symbol __imp_GetLastError
+     1>libcmtd.lib(dbgrptt.obj) : error LNK2001: unresolved external symbol __imp_GetLastError
+     1>libcmtd.lib(mbstowcs.obj) : error LNK2001: unresolved external symbol __imp_GetLastError
+     1>libcmtd.lib(wcstombs.obj) : error LNK2001: unresolved external symbol __imp_GetLastError
+     1>libcmtd.lib(winsig.obj) : error LNK2001: unresolved external symbol __imp_GetLastError
+     1>libcmtd.lib(free.obj) : error LNK2001: unresolved external symbol __imp_GetLastError
+     1>libcmtd.lib(realloc.obj) : error LNK2001: unresolved external symbol __imp_GetLastError
+     1>libcmtd.lib(expand.obj) : error LNK2001: unresolved external symbol __imp_GetLastError
+     1>libcmtd.lib(tidtable.obj) : error LNK2001: unresolved external symbol __imp_GetLastError
+     1>libcmtd.lib(crt0dat.obj) : error LNK2001: unresolved external symbol __imp_GetLastError
+     1>libcmtd.lib(inithelp.obj) : error LNK2001: unresolved external symbol __imp_GetLastError
+     1>libcmtd.lib(rand_s.obj) : error LNK2001: unresolved external symbol __imp_GetLastError
+     1>libcmtd.lib(tidtable.obj) : error LNK2001: unresolved external symbol __imp_SetLastError
+     1>libcmtd.lib(tidtable.obj) : error LNK2001: unresolved external symbol __imp_GetCurrentThread
+     1>libcmtd.lib(tidtable.obj) : error LNK2001: unresolved external symbol __imp_GetCurrentThreadId
+     1>libcmtd.lib(winsig.obj) : error LNK2001: unresolved external symbol __imp_EncodePointer
+     1>libcmtd.lib(crtmboxw.obj) : error LNK2001: unresolved external symbol __imp_EncodePointer
+     1>libcmtd.lib(onexit.obj) : error LNK2001: unresolved external symbol __imp_EncodePointer
+     1>libcmtd.lib(cmiscdat.obj) : error LNK2001: unresolved external symbol __imp_EncodePointer
+     1>libcmtd.lib(handler.obj) : error LNK2001: unresolved external symbol __imp_EncodePointer
+     1>libcmtd.lib(rand_s.obj) : error LNK2001: unresolved external symbol __imp_EncodePointer
+     1>libcmtd.lib(frame.obj) : error LNK2001: unresolved external symbol __imp_EncodePointer
+     1>libcmtd.lib(hooks.obj) : error LNK2001: unresolved external symbol __imp_EncodePointer
+     1>libcmtd.lib(crt0dat.obj) : error LNK2001: unresolved external symbol __imp_EncodePointer
+     1>libcmtd.lib(invarg.obj) : error LNK2001: unresolved external symbol __imp_EncodePointer
+     1>libcmtd.lib(frame.obj) : error LNK2001: unresolved external symbol __imp_RaiseException
+     1>libcmtd.lib(throw.obj) : error LNK2001: unresolved external symbol __imp_RaiseException
+     1>libcmtd.lib(woutputp.obj) : error LNK2001: unresolved external symbol __imp_DecodePointer
+     1>libcmtd.lib(woutputs.obj) : error LNK2001: unresolved external symbol __imp_DecodePointer
+     1>libcmtd.lib(output.obj) : error LNK2001: unresolved external symbol __imp_DecodePointer
+     1>libcmtd.lib(woutput.obj) : error LNK2001: unresolved external symbol __imp_DecodePointer
+     1>libcmtd.lib(outputp.obj) : error LNK2001: unresolved external symbol __imp_DecodePointer
+     1>libcmtd.lib(outputs.obj) : error LNK2001: unresolved external symbol __imp_DecodePointer
+     1>libcmtd.lib(handler.obj) : error LNK2001: unresolved external symbol __imp_DecodePointer
+     1>libcmtd.lib(rand_s.obj) : error LNK2001: unresolved external symbol __imp_DecodePointer
+     1>libcmtd.lib(winsig.obj) : error LNK2001: unresolved external symbol __imp_DecodePointer
+     1>libcmtd.lib(crtmboxw.obj) : error LNK2001: unresolved external symbol __imp_DecodePointer
+     1>libcmtd.lib(hooks.obj) : error LNK2001: unresolved external symbol __imp_DecodePointer
+     1>libcmtd.lib(crt0dat.obj) : error LNK2001: unresolved external symbol __imp_DecodePointer
+     1>libcmtd.lib(invarg.obj) : error LNK2001: unresolved external symbol __imp_DecodePointer
+     1>libcmtd.lib(onexit.obj) : error LNK2001: unresolved external symbol __imp_DecodePointer
+     1>libcmtd.lib(mlock.obj) : error LNK2001: unresolved external symbol __imp_EnterCriticalSection
+     1>libcmtd.lib(_file.obj) : error LNK2001: unresolved external symbol __imp_EnterCriticalSection
+     1>libcmtd.lib(osfinfo.obj) : error LNK2001: unresolved external symbol __imp_EnterCriticalSection
+     1>libcmtd.lib(mlock.obj) : error LNK2001: unresolved external symbol __imp_LeaveCriticalSection
+     1>libcmtd.lib(_file.obj) : error LNK2001: unresolved external symbol __imp_LeaveCriticalSection
+     1>libcmtd.lib(osfinfo.obj) : error LNK2001: unresolved external symbol __imp_LeaveCriticalSection
+     1>libcmtd.lib(mlock.obj) : error LNK2001: unresolved external symbol __imp_InitializeCriticalSectionAndSpinCount
+     1>libcmtd.lib(ioinit.obj) : error LNK2001: unresolved external symbol __imp_InitializeCriticalSectionAndSpinCount
+     1>libcmtd.lib(osfinfo.obj) : error LNK2001: unresolved external symbol __imp_InitializeCriticalSectionAndSpinCount
+     1>libcmtd.lib(mlock.obj) : error LNK2001: unresolved external symbol __imp_DeleteCriticalSection
+     1>libcmtd.lib(closeall.obj) : error LNK2001: unresolved external symbol __imp_DeleteCriticalSection
+     1>libcmtd.lib(ioinit.obj) : error LNK2001: unresolved external symbol __imp_DeleteCriticalSection
+     1>libcmtd.lib(mlock.obj) : error LNK2001: unresolved external symbol __imp_FatalAppExitA
+     1>libcmtd.lib(crt0dat.obj) : error LNK2001: unresolved external symbol __imp_ExitProcess
+     1>libcmtd.lib(crt0dat.obj) : error LNK2001: unresolved external symbol __imp_GetModuleHandleExW
+     1>libcmtd.lib(dbgrptw.obj) : error LNK2001: unresolved external symbol __imp_GetModuleHandleExW
+     1>libcmtd.lib(dbgrpt.obj) : error LNK2001: unresolved external symbol __imp_GetModuleHandleExW
+     1>libcmtd.lib(crt0dat.obj) : error LNK2001: unresolved external symbol __imp_GetProcAddress
+     1>libcmtd.lib(winapisupp.obj) : error LNK2001: unresolved external symbol __imp_GetProcAddress
+     1>libcmtd.lib(rand_s.obj) : error LNK2001: unresolved external symbol __imp_GetProcAddress
+     1>libcmtd.lib(crtmboxw.obj) : error LNK2001: unresolved external symbol __imp_GetProcAddress
+     1>libcmtd.lib(crt0dat.obj) : error LNK2001: unresolved external symbol __imp_AreFileApisANSI
+     1>libcmtd.lib(mbstowcs.obj) : error LNK2001: unresolved external symbol __imp_MultiByteToWideChar
+     1>libcmtd.lib(mbtowc.obj) : error LNK2001: unresolved external symbol __imp_MultiByteToWideChar
+     1>libcmtd.lib(crt0dat.obj) : error LNK2001: unresolved external symbol __imp_MultiByteToWideChar
+     1>libcmtd.lib(a_map.obj) : error LNK2001: unresolved external symbol __imp_MultiByteToWideChar
+     1>libcmtd.lib(a_str.obj) : error LNK2001: unresolved external symbol __imp_MultiByteToWideChar
+     1>libcmtd.lib(wsetloca.obj) : error LNK2001: unresolved external symbol __imp_MultiByteToWideChar
+     1>libcmtd.lib(dbgheap.obj) : error LNK2001: unresolved external symbol __imp_HeapSize
+     1>libcmtd.lib(expand.obj) : error LNK2001: unresolved external symbol __imp_HeapSize
+     1>libcmtd.lib(dbgheap.obj) : error LNK2001: unresolved external symbol __imp_HeapValidate
+     1>libcmtd.lib(heapchk.obj) : error LNK2001: unresolved external symbol __imp_HeapValidate
+     1>libcmtd.lib(dbgheap.obj) : error LNK2001: unresolved external symbol __imp_GetSystemInfo
+     1>libcmtd.lib(winapisupp.obj) : error LNK2001: unresolved external symbol __imp_UnhandledExceptionFilter
+     1>libcmtd.lib(winapisupp.obj) : error LNK2001: unresolved external symbol __imp_SetUnhandledExceptionFilter
+     1>libcmtd.lib(winapisupp.obj) : error LNK2001: unresolved external symbol __imp_FlsAlloc
+     1>libcmtd.lib(winapisupp.obj) : error LNK2001: unresolved external symbol __imp_FlsGetValue
+     1>libcmtd.lib(winapisupp.obj) : error LNK2001: unresolved external symbol __imp_FlsSetValue
+     1>libcmtd.lib(winapisupp.obj) : error LNK2001: unresolved external symbol __imp_FlsFree
+     1>libcmtd.lib(winapisupp.obj) : error LNK2001: unresolved external symbol __imp_GetCurrentProcess
+     1>libcmtd.lib(winapisupp.obj) : error LNK2001: unresolved external symbol __imp_TerminateProcess
+     1>libcmtd.lib(winapisupp.obj) : error LNK2001: unresolved external symbol __imp_GetStartupInfoW
+     1>libcmtd.lib(ioinit.obj) : error LNK2001: unresolved external symbol __imp_GetStartupInfoW
+     1>libcmtd.lib(winapisupp.obj) : error LNK2001: unresolved external symbol __imp_GetModuleHandleW
+     1>libcmtd.lib(mbctype.obj) : error LNK2001: unresolved external symbol __imp_IsValidCodePage
+     1>libcmtd.lib(getqloc.obj) : error LNK2001: unresolved external symbol __imp_IsValidCodePage
+     1>libcmtd.lib(mbctype.obj) : error LNK2001: unresolved external symbol __imp_GetACP
+     1>libcmtd.lib(wsetloca.obj) : error LNK2001: unresolved external symbol __imp_GetACP
+     1>libcmtd.lib(getqloc.obj) : error LNK2001: unresolved external symbol __imp_GetACP
+     1>libcmtd.lib(mbctype.obj) : error LNK2001: unresolved external symbol __imp_GetOEMCP
+     1>libcmtd.lib(mbctype.obj) : error LNK2001: unresolved external symbol __imp_GetCPInfo
+     1>libcmtd.lib(initctyp.obj) : error LNK2001: unresolved external symbol __imp_GetCPInfo
+     1>libcmtd.lib(abort.obj) : error LNK2001: unresolved external symbol IsProcessorFeaturePresent
+     1>libcmtd.lib(gs_report.obj) : error LNK2001: unresolved external symbol IsProcessorFeaturePresent
+     1>libcmtd.lib(invarg.obj) : error LNK2001: unresolved external symbol IsProcessorFeaturePresent
+     1>libcmtd.lib(gs_report.obj) : error LNK2001: unresolved external symbol __imp_IsDebuggerPresent
+     1>libcmtd.lib(invarg.obj) : error LNK2001: unresolved external symbol __imp_IsDebuggerPresent
+     1>libcmtd.lib(crtmboxw.obj) : error LNK2001: unresolved external symbol __imp_IsDebuggerPresent
+     1>libcmtd.lib(crt0msg.obj) : error LNK2001: unresolved external symbol __imp_GetStdHandle
+     1>libcmtd.lib(dbgrptt.obj) : error LNK2001: unresolved external symbol __imp_GetStdHandle
+     1>libcmtd.lib(ioinit.obj) : error LNK2001: unresolved external symbol __imp_GetStdHandle
+     1>libcmtd.lib(write.obj) : error LNK2001: unresolved external symbol __imp_GetStdHandle
+     1>libcmtd.lib(crt0msg.obj) : error LNK2001: unresolved external symbol __imp_WriteFile
+     1>libcmtd.lib(dbgrptt.obj) : error LNK2001: unresolved external symbol __imp_WriteFile
+     1>libcmtd.lib(write.obj) : error LNK2001: unresolved external symbol __imp_WriteFile
+     1>libcmtd.lib(crt0msg.obj) : error LNK2001: unresolved external symbol __imp_GetModuleFileNameW
+     1>libcmtd.lib(dbgrptw.obj) : error LNK2001: unresolved external symbol __imp_GetModuleFileNameW
+     1>libcmtd.lib(heapinit.obj) : error LNK2001: unresolved external symbol __imp_GetProcessHeap
+     1>libcmtd.lib(rand_s.obj) : error LNK2001: unresolved external symbol __imp_FreeLibrary
+     1>libcmtd.lib(rand_s.obj) : error LNK2001: unresolved external symbol __imp_LoadLibraryExW
+     1>libcmtd.lib(crtmboxw.obj) : error LNK2001: unresolved external symbol __imp_LoadLibraryExW
+     1>libcmtd.lib(winsig.obj) : error LNK2001: unresolved external symbol __imp_SetConsoleCtrlHandler
+     1>libcmtd.lib(free.obj) : error LNK2001: unresolved external symbol __imp_HeapFree
+     1>libcmtd.lib(realloc.obj) : error LNK2001: unresolved external symbol __imp_HeapReAlloc
+     1>libcmtd.lib(expand.obj) : error LNK2001: unresolved external symbol __imp_HeapReAlloc
+     1>libcmtd.lib(expand.obj) : error LNK2001: unresolved external symbol __imp_HeapQueryInformation
+     1>libcmtd.lib(dbgrpt.obj) : error LNK2001: unresolved external symbol __imp_GetModuleFileNameA
+     1>libcmtd.lib(malloc.obj) : error LNK2001: unresolved external symbol __imp_HeapAlloc
+     1>libcmtd.lib(wctomb.obj) : error LNK2001: unresolved external symbol __imp_WideCharToMultiByte
+     1>libcmtd.lib(a_map.obj) : error LNK2001: unresolved external symbol __imp_WideCharToMultiByte
+     1>libcmtd.lib(a_loc.obj) : error LNK2001: unresolved external symbol __imp_WideCharToMultiByte
+     1>libcmtd.lib(wcstombs.obj) : error LNK2001: unresolved external symbol __imp_WideCharToMultiByte
+     1>libcmtd.lib(write.obj) : error LNK2001: unresolved external symbol __imp_WideCharToMultiByte
+     1>libcmtd.lib(a_str.obj) : error LNK2001: unresolved external symbol __imp_GetStringTypeW
+     1>libcmtd.lib(iswctype.obj) : error LNK2001: unresolved external symbol __imp_GetStringTypeW
+     1>libcmtd.lib(crtmboxw.obj) : error LNK2001: unresolved external symbol __imp_OutputDebugStringW
+     1>libcmtd.lib(dbgrptt.obj) : error LNK2001: unresolved external symbol __imp_OutputDebugStringW
+     1>libcmtd.lib(crtmboxw.obj) : error LNK2001: unresolved external symbol __imp_WaitForSingleObjectEx
+     1>libcmtd.lib(crtmboxw.obj) : error LNK2001: unresolved external symbol __imp_CreateThread
+     1>libcmtd.lib(crtmboxw.obj) : error LNK2001: unresolved external symbol __imp_LoadLibraryW
+     1>libcmtd.lib(dbgrptt.obj) : error LNK2001: unresolved external symbol __imp_GetFileType
+     1>libcmtd.lib(ioinit.obj) : error LNK2001: unresolved external symbol __imp_GetFileType
+     1>libcmtd.lib(osfinfo.obj) : error LNK2001: unresolved external symbol __imp_GetFileType
+     1>libcmtd.lib(dbgrptt.obj) : error LNK2001: unresolved external symbol __imp_OutputDebugStringA
+     1>libcmtd.lib(dbgrptt.obj) : error LNK2001: unresolved external symbol __imp_WriteConsoleW
+     1>libcmtd.lib(putwch.obj) : error LNK2001: unresolved external symbol __imp_WriteConsoleW
+     1>libcmtd.lib(winapinls.obj) : error LNK2001: unresolved external symbol __imp_GetTimeFormatEx
+     1>libcmtd.lib(winapinls.obj) : error LNK2001: unresolved external symbol __imp_GetDateFormatEx
+     1>libcmtd.lib(winapinls.obj) : error LNK2001: unresolved external symbol __imp_CompareStringEx
+     1>libcmtd.lib(winapinls.obj) : error LNK2001: unresolved external symbol __imp_GetLocaleInfoEx
+     1>libcmtd.lib(getqloc.obj) : error LNK2001: unresolved external symbol __imp_GetLocaleInfoEx
+     1>libcmtd.lib(winapinls.obj) : error LNK2001: unresolved external symbol __imp_GetUserDefaultLocaleName
+     1>libcmtd.lib(winapinls.obj) : error LNK2001: unresolved external symbol __imp_LCMapStringEx
+     1>libcmtd.lib(winapinls.obj) : error LNK2001: unresolved external symbol __imp_IsValidLocaleName
+     1>libcmtd.lib(winapinls.obj) : error LNK2001: unresolved external symbol __imp_EnumSystemLocalesEx
+     1>libcmtd.lib(ioinit.obj) : error LNK2001: unresolved external symbol __imp_InitOnceExecuteOnce
+     1>libcmtd.lib(commit.obj) : error LNK2001: unresolved external symbol __imp_FlushFileBuffers
+     1>libcmtd.lib(write.obj) : error LNK2001: unresolved external symbol __imp_GetConsoleCP
+     1>libcmtd.lib(write.obj) : error LNK2001: unresolved external symbol __imp_GetConsoleMode
+     1>libcmtd.lib(lseeki64.obj) : error LNK2001: unresolved external symbol __imp_SetFilePointerEx
+     1>libcmtd.lib(osfinfo.obj) : error LNK2001: unresolved external symbol __imp_SetStdHandle
+     1>libcmtd.lib(close.obj) : error LNK2001: unresolved external symbol __imp_CloseHandle
+     1>libcmtd.lib(initcon.obj) : error LNK2001: unresolved external symbol __imp_CloseHandle
+     1>libcmtd.lib(initcon.obj) : error LNK2001: unresolved external symbol __imp_CreateFileW
+     1>D:\PROJECTS\GIT\src\Research\BluePill\HowToBoostPageGuard\Release-amd64\PatchGuardCase.sys : fatal error LNK1120: 73 unresolved externals
+     1>Done Building Project "D:\PROJECTS\GIT\src\Research\BluePill\HowToBoostPageGuard\BlackBox.vcxproj" (Build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:03.30

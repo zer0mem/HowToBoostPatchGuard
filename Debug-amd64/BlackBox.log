@@ -1,0 +1,71 @@
+﻿Build started 6/11/2013 11:16:07 AM.
+     1>Project "D:\blog\#GIT\HowToBoostPatchGuard\BlackBox.vcxproj" on node 2 (Rebuild target(s)).
+     1>_PrepareForClean:
+         Deleting file "D:\blog\#GIT\HowToBoostPatchGuard\\Debug-amd64\PatchGuardCase.lastbuildstate".
+       InitializeBuildStatus:
+         Creating "D:\blog\#GIT\HowToBoostPatchGuard\\Debug-amd64\PatchGuardCase.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       _MASM:
+         Assembling src\amd64\_instrinsics.asm...
+         cmd.exe /C "C:\Users\phlavaty\AppData\Local\Temp\tmp953be2768a534fd18a3461a81d593c3f.cmd"
+         ml64.exe /c /nologo /Zi /Fo"D:\blog\#GIT\HowToBoostPatchGuard\\Debug-amd64\_instrinsics.obj" /W3 /errorReport:prompt  /Tasrc\amd64\_instrinsics.asm
+       _MASM:
+         Assembling src\amd64\_patchguardboost.asm...
+         cmd.exe /C "C:\Users\phlavaty\AppData\Local\Temp\tmpfa6a89eee72e49e5aecc423c092ad026.cmd"
+         ml64.exe /c /nologo /Zi /Fo"D:\blog\#GIT\HowToBoostPatchGuard\\Debug-amd64\_patchguardboost.obj" /W3 /errorReport:prompt  /Tasrc\amd64\_patchguardboost.asm
+       _MASM:
+         Assembling src\amd64\_syscall.asm...
+         cmd.exe /C "C:\Users\phlavaty\AppData\Local\Temp\tmpb3151e17faed4c8e996c12368de4d01d.cmd"
+         ml64.exe /c /nologo /Zi /Fo"D:\blog\#GIT\HowToBoostPatchGuard\\Debug-amd64\_syscall.obj" /W3 /errorReport:prompt  /Tasrc\amd64\_syscall.asm
+       ClCompile:
+         D:\soft\installed\VC\bin\x86_amd64\CL.exe /c /I"C:\Program Files (x86)\Windows Kits\8.0\Include\shared" /I"C:\Program Files (x86)\Windows Kits\8.0\Include\km" /I"C:\Program Files (x86)\Windows Kits\8.0\Include\um" /I"D:\blog\#GIT\HowToBoostPatchGuard\\" /Zi /nologo /W3 /WX- /Od /D DBG /D DEBUG /D _DEBUG /D WIN64 /D _WIN64 /D _M_AMD64 /D _AMD_64_ /D HYPERVISOR /D _WINDLL /GF /Gm /MTd /Zp8 /GS- /fp:precise /Zc:wchar_t /Zc:forScope- /GR- /Yc"stdafx.h" /Fp"D:\blog\#GIT\HowToBoostPatchGuard\\Debug-amd64\PatchGuardCase.pch" /Fo"D:\blog\#GIT\HowToBoostPatchGuard\\Debug-amd64\\" /Fd"D:\blog\#GIT\HowToBoostPatchGuard\\Debug-amd64\vc110.pdb" /Gz /TP /Zl /errorReport:prompt PatchGuardCase.cpp src\Common\libc.cpp src\Common\Mdl.cpp src\PatchGuardBoost\PatchGuardBoost.cpp src\PatchGuard\PatchGuard.cpp src\SYSCALL\CSysCall.cpp StdAfx.cpp
+         StdAfx.cpp
+         CSysCall.cpp
+         PatchGuard.cpp
+         PatchGuardBoost.cpp
+         Mdl.cpp
+         libc.cpp
+     1>src\Common\libc.cpp(16): warning C4200: nonstandard extension used : zero-sized array in struct/union
+                 Cannot generate copy-ctor or copy-assignment operator when UDT contains a zero-sized array
+         PatchGuardCase.cpp
+       ResourceCompile:
+         C:\Program Files (x86)\Windows Kits\8.0\bin\x86\rc.exe /l"0x0409" /nologo /fo"D:\blog\#GIT\HowToBoostPatchGuard\\Debug-amd64\driver_template.res" driver_template.rc 
+       Link:
+         D:\soft\installed\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"D:\blog\#GIT\HowToBoostPatchGuard\Debug-amd64\PatchGuardCase.sys" /VERBOSE:Lib /INCREMENTAL /NOLOGO /LIBPATH:"C:\Program Files (x86)\Windows Kits\8.0\Lib\win7\km\x64" ntoskrnl.lib hal.lib libcmtd.lib "C:\Program Files (x86)\Windows Kits\8.0\Lib\win7\km\x64\procgrp.lib" /MANIFEST:NO /DEBUG /PDB:"D:\blog\#GIT\HowToBoostPatchGuard\Debug-amd64\PatchGuardCase.pdb" /SUBSYSTEM:NATIVE /Driver /LTCG /TLBID:1 /ENTRY:"DriverEntry" /MACHINE:X64 /safeseh:no /DLL "D:\blog\#GIT\HowToBoostPatchGuard\\Debug-amd64\driver_template.res"
+         "D:\blog\#GIT\HowToBoostPatchGuard\\Debug-amd64\PatchGuardCase.obj"
+         "D:\blog\#GIT\HowToBoostPatchGuard\\Debug-amd64\libc.obj"
+         "D:\blog\#GIT\HowToBoostPatchGuard\\Debug-amd64\Mdl.obj"
+         "D:\blog\#GIT\HowToBoostPatchGuard\\Debug-amd64\PatchGuardBoost.obj"
+         "D:\blog\#GIT\HowToBoostPatchGuard\\Debug-amd64\PatchGuard.obj"
+         "D:\blog\#GIT\HowToBoostPatchGuard\\Debug-amd64\CSysCall.obj"
+         "D:\blog\#GIT\HowToBoostPatchGuard\\Debug-amd64\StdAfx.obj"
+         "D:\blog\#GIT\HowToBoostPatchGuard\\Debug-amd64\_instrinsics.obj"
+         "D:\blog\#GIT\HowToBoostPatchGuard\\Debug-amd64\_patchguardboost.obj"
+         "D:\blog\#GIT\HowToBoostPatchGuard\\Debug-amd64\_syscall.obj"
+     1>LINK : warning LNK4075: ignoring '/INCREMENTAL' due to '/LTCG' specification
+         
+         Searching libraries
+             Searching C:\Program Files (x86)\Windows Kits\8.0\Lib\win7\km\x64\ntoskrnl.lib:
+             Searching C:\Program Files (x86)\Windows Kits\8.0\Lib\win7\km\x64\hal.lib:
+             Searching D:\soft\installed\VC\lib\libcmtd.lib:
+             Searching C:\Program Files (x86)\Windows Kits\8.0\Lib\win7\km\x64\procgrp.lib:
+             Searching D:\soft\installed\VC\lib\libcpmtd.lib:
+             Searching C:\Program Files (x86)\Windows Kits\8.0\Lib\win7\km\x64\ntoskrnl.lib:
+             Searching C:\Program Files (x86)\Windows Kits\8.0\Lib\win7\km\x64\hal.lib:
+             Searching D:\soft\installed\VC\lib\libcmtd.lib:
+         
+         Finished searching libraries
+         LINK : /LTCG specified but no code generation required; remove /LTCG from the link command line to improve linker performance
+         
+         Searching libraries
+             Searching C:\Program Files (x86)\Windows Kits\8.0\Lib\win7\km\x64\ntoskrnl.lib:
+         
+         Finished searching libraries
+         BlackBox.vcxproj -> D:\blog\#GIT\HowToBoostPatchGuard\Debug-amd64\PatchGuardCase.sys
+       FinalizeBuildStatus:
+         Deleting file "D:\blog\#GIT\HowToBoostPatchGuard\\Debug-amd64\PatchGuardCase.unsuccessfulbuild".
+         Touching "D:\blog\#GIT\HowToBoostPatchGuard\\Debug-amd64\PatchGuardCase.lastbuildstate".
+     1>Done Building Project "D:\blog\#GIT\HowToBoostPatchGuard\BlackBox.vcxproj" (Rebuild target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:05.61

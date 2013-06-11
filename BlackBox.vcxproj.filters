@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="StdAfx.cpp" />
+    <ClCompile Include="PatchGuardCase.cpp" />
+    <ClCompile Include="src\PatchGuardBoost\PatchGuardBoost.cpp">
+      <Filter>src\PatchGuardBoost</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Common\Mdl.cpp">
+      <Filter>src\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="src\SYSCALL\CSysCall.cpp">
+      <Filter>src\SYSCALL</Filter>
+    </ClCompile>
+    <ClCompile Include="src\PatchGuard\PatchGuard.cpp">
+      <Filter>src\PatchGuard</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Common\libc.cpp">
+      <Filter>src\Common</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="drv_common.h" />
+    <ClInclude Include="StdAfx.h" />
+    <ClInclude Include="src\Common\instrinsics.h">
+      <Filter>src\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Common\types.h">
+      <Filter>src\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Common\ProcessorWalker.hpp">
+      <Filter>src\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Common\DPC.hpp">
+      <Filter>src\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Common\IRQL.hpp">
+      <Filter>src\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="src\PatchGuardBoost\PatchGuardBoost.h">
+      <Filter>src\PatchGuardBoost</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Common\ColdPatcher.hpp">
+      <Filter>src\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Common\Mdl.h">
+      <Filter>src\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="src\SYSCALL\CSysCall.h">
+      <Filter>src\SYSCALL</Filter>
+    </ClInclude>
+    <ClInclude Include="src\PatchGuard\PatchGuard.h">
+      <Filter>src\PatchGuard</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Common\Common.h">
+      <Filter>src\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Common\msr.h">
+      <Filter>src\Common</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="driver_template.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <MASM Include="src\amd64\_instrinsics.asm">
+      <Filter>amd64</Filter>
+    </MASM>
+    <MASM Include="src\amd64\_patchguardboost.asm">
+      <Filter>amd64</Filter>
+    </MASM>
+    <MASM Include="src\amd64\_syscall.asm">
+      <Filter>amd64</Filter>
+    </MASM>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="src">
+      <UniqueIdentifier>{1da468d2-5f94-4b88-a15a-4d40023bb6e5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Common">
+      <UniqueIdentifier>{d66ad410-509d-4277-a0e9-98700ed09700}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="amd64">
+      <UniqueIdentifier>{12501573-d1f5-49bf-83f9-c9885c853537}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\PatchGuardBoost">
+      <UniqueIdentifier>{c57b39b7-13ee-497b-86d7-0c736ee722db}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\SYSCALL">
+      <UniqueIdentifier>{077107e1-40be-4192-9bd2-924ab2b65594}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\PatchGuard">
+      <UniqueIdentifier>{0cf0e3ea-862a-411a-903b-cc29140d5366}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\amd64\common.inc">
+      <Filter>amd64</Filter>
+    </None>
+  </ItemGroup>
+</Project>
